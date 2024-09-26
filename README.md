@@ -1,38 +1,70 @@
-# create-svelte
+# Svelte Template
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+This template provides a minimal setup to get started with *Svelte*.
 
-## Creating a project
+## Prerequisites
 
-If you're seeing this, you've probably already done this step. Congrats!
+A combination of [Docker](https://www.docker.com/get-started/) and [Kubernetes](https://microk8s.io/docs/install-alternatives) are used to replicate a *production-like* environment locally. This improves the developer experience, as the developer can be confident that the functionality being developed locally will seamlessly integrate into production environments.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+### Docker / Docker Compose
 
-# create a new project in my-app
-npm create svelte@latest my-app
+**Docker** is utilized to ensure that deployed resources are ephemeral as development is being conducted. This ensures that current development will be independent and unaffected by previous development.
+
+### Kubernetes (In Progress)
+
+**Kubernetes** is used to best replicate a production-like environment locally, if the application is to be deployed into **K8s**. MicroK8s is utilized as a wrapper to kubectl for a much smoother development experience.
+
+## Development Workflow
+
+Rapid development within this template revolves around the provided scripts within the `scripts/` directory.
+
+| Script                      | Description |
+| -----------                 | ----------- |
+| **scripts/build.sh**        | Installs dependencies and builds new Docker images after code changes. |
+| **scripts/deploy.sh**       | Spins up new containers and a test database. |
+| **scripts/teardown.sh**     | Tears down existing resources. |
+| **scripts/purge.sh**        | Cleans up existing containers and start from a clean, pristine state. |
+
+### Tiers
+
+The project is split across two tiers, a **frontend** and a **database**. The frontend directory contains a React project scaffolded by Remix. The db directory contains a **Postgres** database that is seeded on startup with the contents of the `dump.sql` file.
+
+The deployment of these two tiers is managed by Docker Compose via the configuration in `docker-compose.yml`.
+
+### Steps
+
+1. Make changes to either the frontend or database. Execute the build script to generate new Docker images containing the changes.
+
+```sh
+
+# Build
+scripts/build.sh
+
 ```
 
-## Developing
+2. Once new Docker images are available, they can be deployed via Docker Compose.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+```sh
 
-```bash
-npm run dev
+# Deploy
+scripts/deploy.sh
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+3. Tear down existing resources to make room for future changes.
 
-To create a production version of your app:
+```sh
 
-```bash
-npm run build
+# Teardown
+scripts/teardown.sh
+
 ```
 
-You can preview the production build with `npm run preview`.
+4. To purge existing containers and get back to a pristine state, the purge script will clean up existing Docker images.
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+```sh
+
+# Purge
+scripts/purge.sh
+
+```
