@@ -1,5 +1,5 @@
 # Initialize and seed a Postgres database.
-FROM postgres:latest as db
+FROM postgres:latest AS db
 
 # Establish working directory
 WORKDIR /app
