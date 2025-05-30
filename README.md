@@ -10,10 +10,6 @@ A combination of [Docker](https://www.docker.com/get-started/) and [Kubernetes](
 
 **Docker** is utilized to ensure that deployed resources are ephemeral as development is being conducted. This ensures that current development will be independent and unaffected by previous development.
 
-### Kubernetes (In Progress)
-
-**Kubernetes** is used to best replicate a production-like environment locally, if the application is to be deployed into **K8s**. MicroK8s is utilized as a wrapper to kubectl for a much smoother development experience.
-
 ## Development Workflow
 
 Rapid development within this template revolves around the provided scripts within the `scripts/` directory.
