@@ -4,7 +4,7 @@ This template provides a minimal setup to get started with *Svelte*.
 
 ## Prerequisites
 
-A combination of [Docker](https://www.docker.com/get-started/) and [Kubernetes](https://microk8s.io/docs/install-alternatives) are used to replicate a *production-like* environment locally. This improves the developer experience, as the developer can be confident that the functionality being developed locally will seamlessly integrate into production environments.
+A combination of [Docker](https://www.docker.com/get-started/) and [Docker Compose](https://docs.docker.com/compose/) are used to replicate a *production-like* environment locally. This improves the developer experience, as the developer can be confident that the functionality being developed locally will seamlessly integrate into production environments.
 
 ### Docker / Docker Compose
 
