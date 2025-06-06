@@ -1,6 +1,6 @@
-# Svelte Template
+# odds-data-ui
 
-This template provides a minimal setup to get started with *Svelte*.
+The odds-data-ui applicaton is reponsible for visualizing Odds data.
 
 ## Prerequisites
 
