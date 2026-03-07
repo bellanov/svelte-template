@@ -1,6 +1,6 @@
-# odds-data-ui
+# svelte-template
 
-The odds-data-ui applicaton is reponsible for visualizing Odds data.
+Template for general *Svelte* development.
 
 ## Prerequisites
 
