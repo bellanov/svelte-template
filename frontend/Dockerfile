@@ -1,5 +1,5 @@
 # Build
-FROM node:23-slim AS build
+FROM node:24-slim AS build
 
 # Set the working directory
 WORKDIR /app
