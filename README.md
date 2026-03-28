@@ -1,6 +1,6 @@
-# odds-data-ui
+# svelte-template
 
-The odds-data-ui applicaton is reponsible for visualizing Odds data.
+Template for general *Svelte* development.
 
 ## Prerequisites
 
@@ -45,6 +45,13 @@ scripts/build.sh
 # Deploy
 scripts/deploy.sh
 
+# Application Access
+# The application is accessible locally on port 8080.
+# http://localhost:8080
+
+# PHPMyAdmin Access
+# A PHPMyAdmin instance is accessible locally on port 8081. 
+# http://localhost:8081
 ```
 
 3. Tear down existing resources to make room for future changes.
