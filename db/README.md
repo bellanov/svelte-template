@@ -1,4 +1,4 @@
-# Database
+# Sample Databases
 
 Describe the sample database and how it's seeded.
 
