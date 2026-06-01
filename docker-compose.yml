@@ -14,7 +14,7 @@ services:
       - front-tier
       - data-tier
 
-  db:
+  postgres:
     container_name: postgres
     build:
       context: ./db/postgres
