@@ -1,6 +1,6 @@
 # Sample Databases
 
-Describe the sample database and how it's seeded.
+Describe each sample database and how it's seeded.
 
 ## Postgres
 
