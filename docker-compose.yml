@@ -14,10 +14,10 @@ services:
       - front-tier
       - data-tier
 
-  db:
+  postgres:
     container_name: postgres
     build:
-      context: ./db
+      context: ./db/postgres
       dockerfile: Dockerfile
     restart: always
     ports:
