@@ -17,7 +17,7 @@ services:
   db:
     container_name: postgres
     build:
-      context: ./db
+      context: ./db/postgres
       dockerfile: Dockerfile
     restart: always
     ports:

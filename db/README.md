@@ -4,7 +4,7 @@ Describe each sample database and how it's seeded.
 
 ## Postgres
 
-The default database is a Postgres instance. It is initialized and seeded via `scripts/init.sh`, which runs `scripts/dump.sql` to create and populate the `test_data` table.
+The default database is a Postgres instance. It is initialized and seeded via `postgres/scripts/init.sh`, which runs `postgres/scripts/dump.sql` to create and populate the `test_data` table.
 
 ## MongoDB
 
